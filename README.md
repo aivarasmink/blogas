@@ -1,0 +1,2 @@
+# blogas
+mokinousi kurti bloga
