@@ -29,11 +29,12 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ['name', 'is_done', 'deadline' 'project', 'owner', 'created_at']
-    list_display_links = ['is_done', 'project', 'owner', 'deadline', 'created_at']
+    list_display = ['name', 'is_done', 'deadline', 'project', 'owner', 'created_at']
+    list_filter = ['is_done', 'deadline', 'created_at']
     search_fields = ['name', 'description', 'project__name', 'owner__last_name', 'owner__username']
-    list_editable = ['is_done']
+    list_editable = ['is_done', 'owner', 'project']
     readonly_fields = ['id', 'created_at', 'updated_at']
+    autocomplete_fields = ['project', 'owner']
     fieldsets = (
         (_("general").title(), {
             "fields": (

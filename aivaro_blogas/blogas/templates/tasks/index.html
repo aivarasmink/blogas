@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% load i18n %}
 {% block content %}
     <h1>BLOGAS</h1>
-    <p>Users: {{ {% trans "users_count"|capfirst %} }}</p>
-    <p>Projects: {{ {% trans "projects_count"|capfirst %} }}</p>
-    <p>Tasks: {{ {% trans "tasks_count"|capfirst %} }}</p>
+    <p>{% trans "Users"|capfirst %}: {{ users_count }}</p>
+    <p>{% trans "Projects"|capfirst %}: {{ projects_count }}</p>
+    <p>{% trans "Tasks"|capfirst %}: {{ tasks_count }}</p>
 {% endblock content %}
