@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-27 11:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
+"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
+"1 : n % 1 != 0 ? 2: 3);\n"
+#: blogas/admin.py:20
+msgid "Total tasks"
+msgstr "Viso užduočių"
+
+#: blogas/admin.py:24
+msgid "Undone tasks"
+msgstr "Nebaigtos užduotys"
+
+#: blogas/admin.py:28
+msgid "recent tasks"
+msgstr "Neseniai atliktos užduotys"
+
+#: blogas/admin.py:38
+msgid "general"
+msgstr "bendra"
+
+#: blogas/admin.py:44
+msgid "ownership"
+msgstr "nuosavybė"
+
+#: blogas/admin.py:49
+msgid "temporal tracking"
+msgstr "laiko stebėjimas"
+
+#: blogas/apps.py:10
+msgid "blogas"
+msgstr "blogas"
+
+#: blogas/models.py:8 blogas/models.py:29
+msgid "name"
+msgstr "vardas"
+
+#: blogas/models.py:12 blogas/models.py:40
+msgid "owner"
+msgstr "savininkas"
+
+#: blogas/models.py:20 blogas/models.py:34
+msgid "project"
+msgstr "projektas"
+
+#: blogas/models.py:21
+msgid "projects"
+msgstr "projektai"
+
+#: blogas/models.py:30
+msgid "description"
+msgstr "aprašymas"
+
+#: blogas/models.py:43
+msgid "created at"
+msgstr "sukurta"
+
+#: blogas/models.py:44
+msgid "updated at"
+msgstr "atnaujinta"
+
+#: blogas/models.py:45
+msgid "is done"
+msgstr "ar atlikta"
+
+#: blogas/models.py:46
+msgid "deadline"
+msgstr "terminas"
+
+#: blogas/models.py:52 blogas/views.py:30
+msgid "task"
+msgstr "užduotis"
+
+#: blogas/models.py:53
+msgid "tasks"
+msgstr "užduotys"
+
+#: blogas/views.py:32
+msgid "marked as"
+msgstr "pažymėta kaip"
+
+#: blogas/views.py:33
+msgid "done"
+msgstr "atlikta"
+
+#: blogas/views.py:33
+msgid "undone"
+msgstr "neatlikta"

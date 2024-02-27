@@ -1,11 +1,11 @@
-{% extends "base.html" %}
-{% block title %}{{ block.super }} list{% endblock title %}
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ block.super }} {% trans "list"|capfirst %}{% endblock title %}
 {% block content %}
 <h1>BLOGAS</h1>
 <ul>
     <li class="list-table-header">
-        <span>name</span>
-        <span style="float:right;">Deadline</span>
+        <span>{% trans "name"|capfirst %}</span>
+        <span style="float:right;">{% trans "Deadline"|capfirst %}</span>
         </li>
     {% for task in task_list %}
     <li><a href="{% url "task_done" task.pk %}">
@@ -14,7 +14,7 @@
         <span style="float:right;">{{ task.deadline }}</span>
     </li>
     {% empty %}
-    <li>No Tasks Found</li>
+    <li>{% trans "No Tasks Found"|capfirst %}</li>
     {% endfor %}
     </ul>
 {% for task in task_list %}

@@ -5,6 +5,4 @@ from django.utils.translation import gettext_lazy as _
 class BlogasConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'blogas'
-
-class Meta:
     verbose_name = _('blogas')

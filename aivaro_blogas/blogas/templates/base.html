@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load static %}
+<!DOCTYPE html>{% load static i18n %}load
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <span class="logo">TASKer</span>
+        <span class="logo">BLOGAS</span>
         <ul>
-            <li><a href="{% url 'index' %}">Dashboard</a></li>
-            <li><a href="{% url 'task_list' %}">Tasks</a></li>
+            <li><a href="{% url 'index' %}">{% trans "Dashboard"|capfirst %}</a></li>
+            <li><a href="{% url 'task_list' %}">{% trans "Tasks"|capfirst %}</a></li>
         </ul>
     </header>
     <section class="messages">
