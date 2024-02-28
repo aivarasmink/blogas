@@ -1,13 +1,26 @@
 {% extends "base.html" %}{% load i18n %}
-{% block title %}{{ project.name }} | {{ block.super }}{% endblock title %}
+{% block title %}{{ block.super }} | {{ task }}{% endblock title %}
 {% block content %}
-<h1>{{ project.name }}</h1>
-{% if project.owner == request.user %}
-    <p>
-        <a class="button" href="{% url "project_update" project.pk %}">{% trans "edit"|capfirst %}</a>
-        <a class="button" href="{% url "project_delete" project.pk %}">{% trans "delete"|capfirst %}</a>
-    </p>
+<h1><a href="{% url "task_done" task.pk %}?next={{ request.path }}">
+    {% if task.is_done %}&#x2611;{% else %}&#x2610;{% endif %}</a>
+    {{ task.name }}
+</h1>
+<div class="toolbar">
+    {% if task.owner == request.user %}
+        <a class="button" href="{% url "task_update" task.pk %}?next={{ request.GET.next|urlencode }}">
+            {% trans "edit"|capfirst %}</a>
+        <a class="button" href="{% url "task_delete" task.pk %}?next={{ request.GET.next|urlencode }}">
+            {% trans "delete"|capfirst %}</a>
+    {% endif %}
+    <a class="button" href="{% if request.GET.next %}{{ request.GET.next }}{% else %}{% url "task_list" %}{% endif %}">
+        {% trans "return"|capfirst %}</a>
+</div>
+<p>{% trans "owner"|capfirst %}: {{ task.owner }} / {% trans "project"|capfirst %}: {{ task.project }}</p>
+<p>{% trans "deadline"|capfirst %}: {{ task.deadline }}</p>
+<p>{{ task.description }}</p>
+<p>{% trans "created"|capfirst %}: {{ task.created_at }}{% if task.created_at != task.updated_at %},
+    {% trans "updated" %}: {{ task.updated_at }}
 {% endif %}
-<p>{% trans "owner" %}: <a href="{% url "user_detail" project.owner.username %}">{{ project.owner }}</a></p>
-<p>{% trans "tasks" %}: {{ project.tasks.count }}</p>
+</p>
 {% endblock content %}
+
