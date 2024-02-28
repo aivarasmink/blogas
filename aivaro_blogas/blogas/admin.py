@@ -14,6 +14,8 @@ class ProjectAdmin(admin.ModelAdmin):
             ),
         }),
     )
+
+    autocomplete_fields = ['owner']
     
     def total_tasks(self, obj: models.Project):
         return obj.tasks.count()
