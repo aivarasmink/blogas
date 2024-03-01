@@ -114,4 +114,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Daphne
-ASGI_APPLICATION = "mysite.asgi.application"
+ASGI_APPLICATION = "justchat.asgi.application"
